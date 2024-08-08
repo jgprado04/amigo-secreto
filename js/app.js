@@ -15,6 +15,12 @@ function adicionar() {
         return;
     }
 
+    if(lista.includes(nome)) {
+        alert("Essa pessoa já está incluida na lista! Caso seja uma pessoa diferente coloque um sobenome");
+        nomeAmigo.value = "";
+        return;
+    }
+
     lista.push(nome);
 
     let resposta = gerarResposta(tamanho);
@@ -33,7 +39,7 @@ function gerarResposta(tamanho) {
 
 function sortear() {
     if(lista.length <= 1) {
-        alert("Por favor coloque mais uma pessoa para gerar o sorteio!");
+        alert("Por favor coloque mais pessoas para gerar o sorteio!");
         return;
     }
 
